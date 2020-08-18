@@ -14,3 +14,4 @@ with open(file_path, "r") as csvfile:
 
     for row in csvreader:
         contents.append(row)
+# begin analyzing data
