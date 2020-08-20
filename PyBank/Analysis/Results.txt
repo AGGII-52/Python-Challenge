@@ -1,1 +1,7 @@
-Financial Analysis---------------------------Total MonthsNet Total-Profits/LossesAvg Change-Profits/LossesGreatest Increase-ProfitsGreatest Decrease-Profits
+Financial Analysis
+-------------------------------------------
+Total Months: 86
+Net Total-Profits/Losses
+Avg Change-Profits/Losses
+Greatest Increase-Profits
+Greatest Decrease-Profits
