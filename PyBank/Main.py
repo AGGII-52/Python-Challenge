@@ -6,11 +6,11 @@ import csv
 input_path = os.path.join( "Resources", "budget_data.csv")
 output_path = os.path.join( "Analysis", "Results.txt")
 #set variables
-Total Months = 0
-Net Total-Profits/Losses = 0
-Avg Change = 0
-Greatest Increase-Profis/Losses = 0
-Greatest Decrease-Profits/Losses = 0
+Total_Months = 0
+Net_Total_PL = 0
+Avg_Change = 0
+Greatest_Increase_PL = 0
+Greatest_Decrease_PL = 0
 #read into file
 with open(input_path, "r") as csvfile:
     
@@ -23,13 +23,14 @@ with open(input_path, "r") as csvfile:
 
     #analyze data
     for row in csvreader:
-        contents.append(row[0])
+        Total_Months + 1
+        #contents.append(row[0])
 
 #write into file
 with open(output_path, "w") as txtfile:
     txtfile.writer("Financial Analysis")
     txtfile.writer("---------------------------")
-    txtfile.writer("Total Months")
+    txtfile.writer(f"Total Months: {Total_Months}")
     txtfile.writer("Net Total-Profits/Losses")
     txtfile.writer("Avg Change-Profits/Losses")
     txtfile.writer("Greatest Increase-Profits")
