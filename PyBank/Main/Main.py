@@ -44,7 +44,8 @@ with open(csvpath, "r") as csvfile:
 
         Avg_Change = Net_Total_PL / (len(PL))
 
-        
+
+
 
 
 
@@ -53,8 +54,8 @@ with open(output_path, "w") as txtfile:
     txtfile.write("Financial Analysis\n")
     txtfile.write("----------------------------------------\n")
     txtfile.write(f"Total Months: {Total_Months}\n")
-    txtfile.write("Net Total-Profits/Losses:\n")
-    txtfile.write("Avg Change-Profits/Losses:\n")
+    txtfile.write(f"Net Total-Profits/Losses:{Net_Total_PL}\n")
+    txtfile.write(f"Avg Change-Profits/Losses:{Avg_Change}\n")
     txtfile.write("Greatest Increase-Profits:\n")
     txtfile.write("Greatest Decrease-Profits:\n")
     
