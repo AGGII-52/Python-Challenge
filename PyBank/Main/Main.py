@@ -3,8 +3,8 @@ import os
 import csv
 
 # list relative path
-in_path = os.path.join("Resources", "budget_data.csv")
-out_path = os.path.join( "Analysis", "Results.txt")
+csvpath = os.path.join("..","Resources", "budget_data.csv")
+output_path = os.path.join("..", "Analysis", "Results.txt")
 
 #set variables
 Total_Months = 0
@@ -14,10 +14,21 @@ Greatest_Increase_PL = 0
 Greatest_Decrease_PL = 0
 
 #read into file
-with open(in_path, "r") as csvfile:
+with open(csvpath, "r") as csvfile:
     
     # preserve csv structure
     csvreader = csv.reader(csvfile, delimiter = ",")
+
+    print(csvreader)
+
+    # Read the header row first (skip this step if there is no header)
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
+
+      # Read each row of data after the header
+    for row in csvreader:
+        print(row)
+
     #skip header
     header = next(csvreader)
     #store list as variable
@@ -26,10 +37,19 @@ with open(in_path, "r") as csvfile:
     #analyze data
     for row in csvreader:
         Total_Months += 1
-        #contents.append(row[0])
+        
+        contents.append(row[1])
+        PL = []
+        Net_Total_PL = sum(PL)
+
+        Avg_Change = Net_Total_PL / (len(PL))
+
+        
+
+
 
 #write into file
-with open(out_path, "w") as txtfile:
+with open(output_path, "w") as txtfile:
     txtfile.write("Financial Analysis\n")
     txtfile.write("----------------------------------------\n")
     txtfile.write(f"Total Months: {Total_Months}\n")
